@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    background-color: black;
+    flex-direction:column;
+    width: auto;
+    height: auto;
+}
+/* 返回顶端 */
+.back{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    bottom: 50%;
+    right: 3%;
+    z-index: 99;
+}
+.back a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+}
+.back a:hover{
+    transform: scale(0.9,0.9);
+    color: pink;
+}
+.back a i{
+    font-size: 3rem;
+}
+@keyframes back {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+/* 总体弹性布局 */
+.bodybox{
+    display: flex;
+    flex-direction: column;
+}
+/* 顶端页面 */
+.top {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+.top video{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.myself{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*  */
+    transform: translate(-50%, -65%);
+    width: 500px;
+    height: 500px;
+}
+.myself img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.myself .h-1{
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    width: 100px;
+    height: 35px;
+    line-height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: white;
+    background-color: transparent;
+    text-align: center;
+    box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+    /* 阴影效果 */
+    /* 阴影的水平、垂直位置，模糊距离、阴影尺寸 */
+    z-index: 1;
+}
+.myself .h-2{
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    width: 100px;
+    height: 35px;
+    line-height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: white;
+    background-color: transparent;
+    text-align: center;
+    box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+    z-index: 1;
+}
+.myself .h-3{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100px;
+    height: 35px;
+    line-height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: white;
+    background-color: transparent;
+    text-align: center;
+    box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+    z-index: 1;
+}
+.myself .a1{
+    position: absolute;
+    top: 27%;
+    left: 28%;
+    width: 220px;
+    height: 220px;
+    border: 3px solid transparent;
+    /* 透明边框，再给需要的边上色 */
+    border-top-color: #ff1010;
+    border-bottom-color: #ff4d4d;
+    border-radius: 50%;
+    animation: spin 2s 0.3s linear infinite;
+}
+.myself .a2{
+    position: absolute;
+    top: 24%;
+    left: 25%;
+    width: 250px;
+    height: 250px;
+    border: 3px solid transparent;
+    /* 透明边框，再给需要的边上色 */
+    border-left-color: #1080ff;
+    border-right-color: #ffc74d;
+    border-radius: 50%;
+    animation: spin 2.4s 0.5s linear infinite;
+}
+.myself .a3{
+    position: absolute;
+    top: 21%;
+    left: 22%;
+    width: 280px;
+    height: 280px;
+    border: 3px solid transparent;
+    /* 透明边框，再给需要的边上色 */
+    border-top-color: #ff10ff;
+    border-bottom-color: #4df3ff;
+    border-radius: 50%;
+    animation: spin 2.7s 0.7s linear infinite;
+}
+.myself .a4{
+    position: absolute;
+    top: 18%;
+    left: 19%;
+    width: 310px;
+    height: 310px;
+    border: 3px solid transparent;
+    /* 透明边框，再给需要的边上色 */
+    border-right-color: #97ff10;
+    border-left-color: #dbff10;
+    border-radius: 50%;
+    animation: spin 3.1s 0.9s linear infinite;
+}
+/* 旋转动画 */
+@keyframes spin{
+    to {
+        transform: rotate(360deg);
+      }
+}
+/* 音乐播放图标 */
+.music{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 65%;
+    left: 48.5%;
+}
+.music a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.music #musicON{
+    animation: musicspin 4s linear infinite;
+}
+
+.music a i{
+    font-size: 4rem;
+}
+@keyframes musicspin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* 社交图标 */
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 14%;
+    height: 4%;
+    border: 2px solid white;
+    border-radius: 20px;
+    top: 75%;
+    left: 43%;
+    box-shadow: 0 0 3px 3px white;
+    z-index: 1;
+}
+.icon a i{
+    font-size: 2rem;
+}
+.icon a:hover{
+    transform: scale(0.9,0.9);
+    color: rgb(148, 143, 143);
+}
+.icon a{
+    color: white;
+    padding: 2%;
+    text-decoration: none;
+}
+.icon #bilibili i{
+    font-size: 3rem;
+}
+.icon .qq img{
+    display: none;
+    position: absolute;
+    transform: translate(-15px,10px);
+    width: 200px;
+    height: 200px;
+}
+.icon .qq:hover img{
+    display: block;
+}
+.icon .wx img{
+    display: none;
+    position: absolute;
+    transform: translate(-60px,10px);
+    width: 200px;
+    height: 200px;
+}
+.icon .wx:hover img{
+    display: block;
+}
+
+.main-box{
+    width: 100%;
+    height: 100vh;
+}
+.main-box img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.main-box .rain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-shadow: 0 0 10px 10px black;
+    width: 100%;
+    height: 1%;
+}
+.main-box .rain span{
+    position: relative;
+    width: 7px;
+    height: 7px;
+    background: rgb(249, 252, 108);
+    margin: 2px 30px;
+    border-radius: 50%;
+    animation: rain 15s linear infinite;
+    animation-duration: calc(25s/var(--speed));
+    transform-origin: bottom;
+    z-index: 1;
+}
+@keyframes rain {
+    0%{
+        transform: translateY(0);
+    }
+    70%{
+        transform: translateY(1000px) scale(1);
+    }
+    100%{
+        transform: translateY(1000px) scale(0);
+    }
+}
+/* 导航栏 */
+.menu_bar{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 10%;
+    transform: translate(0,20%);
+    width: 5%;
+    height: 70%;
+    border-radius: 60px;
+    border: 2px solid white;
+}
+.menu_bar img{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 5px;
+    margin: auto;
+    cursor: pointer;
+    background-size: auto;
+    background-position: center;
+    object-fit: cover;
+    /* 图像全覆盖 */
+    transition: all 0.3s ease-in;
+    /* 调整元素更改时间，实现延迟缩放的动画效果 */
+}
+/* 设置导航栏活跃时状态 */
+.menu.menu_active{
+    width: 80px;
+    height: 80px;
+    border: 3px solid white;
+}
+/* 右侧编辑栏 */
+.main-box .write{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 66%;
+    height: 100%;
+    left: 17%;
+    box-shadow: 0 0 10px 10px rgb(255, 255, 255,0.7);
+    background-color:rgb(255, 255, 255,0.7);
+    border-radius: 10px;
+    z-index: 5;
+}
+
+/* 编辑栏内页面 */
+.main-box .write .text{
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: rgb(133, 134, 134,0.8);
+    color: white;
+    display: none;
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 0 10px 10px rgb(133,134,134);
+}
+
+.main-box .write .active_text{
+    display: block;
+    animation: changetext 0.5s linear forwards;
+}
+@keyframes changetext {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.main-box .write div p{
+    font-size: 30px;
+    font-weight: 300;
+}
+/* 个人简介 */
+#me p{
+    padding: 20px;
+    text-align: left;
+}
+/* 学习驿站 */
+#study{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#c{
+    position: relative;
+    width: 90%;
+    height: 100%;
+}
+#java{
+    position: relative;
+    width: 90%;
+    height: 150%;
+}
+#python{
+    position: relative;
+    width: 90%;
+    height: 100%;
+}
+/* 娱乐天地 */
+
+/* 提问框 */
+#issue{
+    position: absolute;
+    display: block;
+    background: rgb(133, 134, 134,0.8);
+    font-size: 1.5rem;
+    padding: 20px;
+    color: white;
+    transform: translate(12%,0);
+    line-height: 30px;
+    min-width: 80%;
+    min-height: 40%;
+    max-width: 80%;
+    max-height: 40%;
+    /* 设置文本框固定大小 */
+}
+/* 提交按钮 */
+.commit{
+    position: relative;
+    display: block;
+    left: 46%;
+    top: 40%;
+    width: 8%;
+    height: 3%;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.reply{
+    position: absolute;
+    text-align:left;
+    background: rgb(133, 134, 134,0.8);
+    transform: translate(12%,100%);
+    line-height: 30px;
+    padding: 20px;
+    width: 80%;
+    height: 40%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.reply p{
+    font-size: 1.5rem;
+}
+

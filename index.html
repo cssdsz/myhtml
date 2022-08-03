@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吃松鼠的松子的个人网站</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+</head>
+<body>
+    <div class="back">
+        <a href="#">
+            <i class="iconfont">&#xe60f;</i>
+        </a>
+    </div>
+    <div class="bodybox">
+        <div class="top">
+            <video id="v1" autoplay loop muted disablePictureInPicture preload="auto">
+                <source src="./video/壁纸.mp4" type="video/mp4"  />
+            </video>
+            <div class="myself" title="吃松鼠的松子">
+                <img src="https://pic4.zhimg.com/80/v2-f44fd3e6d35a273387979f5c0677bf47_720w.jpg" id="touxiang">
+                <div class="h-1">动漫</div>
+                <div class="h-2">音乐</div>
+                <div class="h-3">游戏</div>
+                <div class="a1"></div>
+                <div class="a2"></div>
+                <div class="a3"></div>
+                <div class="a4"></div>
+            </div>
+            <div class="music">
+                <!-- 设置a标签不跳转 -->
+                <a href="javascript:void(0);" id="musicON" title="点我播放音乐:3">
+                    <i class="iconfont">&#xe603;</i>
+                    <!-- 自动播放，循环，预加载 -->
+                    <audio id="audio" src="./music/夏恋-Otokaze.mp3" autoplay loop preload="auto"></audio>
+                </a>
+            </div>
+            <div class="icon shadow">
+                <a href="javascript:void(0);" class="qq">
+                    <i class="iconfont">&#xe882;</i>
+                    <img src="./image/qq.png" alt="">
+                </a>
+                <a href="javascript:void(0);" class="wx">
+                    <i class="iconfont">&#xe600;</i>
+                    <img src="./image/wx.png" alt="">
+                </a>
+                <a href="https://space.bilibili.com/230144014?spm_id_from=333.1007.0.0" target="_blank" id="bilibili">
+                    <i class="iconfont">&#xe601;</i>
+                </a>
+                <a href="https://github.com/cssdsz" target="_blank">
+                    <i class="iconfont">&#xe6a4;</i>
+                </a>
+                <a href="https://music.163.com/#/user/home?id=1363551073" target="_blank">
+                    <i class="iconfont">&#xe63b;</i>
+                </a>
+                
+            </div>
+        </div>
+        <div class="main-box">
+            <!-- 流星雨特效 -->
+            <div class="rain">
+                <span style="--speed: 11"></span>
+                <span style="--speed: 15"></span>
+                <span style="--speed: 12"></span>
+                <span style="--speed: 17"></span>
+                <span style="--speed: 18"></span>
+                <span style="--speed: 11"></span>
+                <span style="--speed: 13"></span>
+                <span style="--speed: 12"></span>
+                <span style="--speed: 16"></span>
+                <span style="--speed: 20"></span>
+                <span style="--speed: 13"></span>
+                <span style="--speed: 19"></span>
+                <span style="--speed: 20"></span>
+                <span style="--speed: 11"></span>
+                <span style="--speed: 13"></span>
+                <span style="--speed: 14"></span>
+                <span style="--speed: 15"></span>
+                <span style="--speed: 12"></span>
+                <span style="--speed: 18"></span>
+                <span style="--speed: 12"></span>
+                <span style="--speed: 14"></span>
+                <span style="--speed: 12"></span>
+                <span style="--speed: 16"></span>
+                <span style="--speed: 15"></span>
+                <span style="--speed: 11"></span>
+                <span style="--speed: 12"></span>
+                <span style="--speed: 17"></span>
+                <span style="--speed: 15"></span>
+            </div>
+            <img src="./image/背景3.jpg" alt="">
+            <div class="menu_bar">
+                <img src="https://pic4.zhimg.com/80/v2-f44fd3e6d35a273387979f5c0677bf47_720w.jpg" class="menu menu_active" onclick="changeMenu(this)" title="个人简介">
+                <img src="https://images.alphacoders.com/114/thumb-1920-1140073.jpg" title="学习驿站" class="menu" onclick="changeMenu(this)">
+                <img src="https://ts1.cn.mm.bing.net/th/id/R-C.948b20325b10807fe44776cfcdadd155?rik=OuGNECTXtPrT5g&riu=http%3a%2f%2fimg2.woyaogexing.com%2f2017%2f05%2f30%2f1fc7e169cde5b536!400x400_big.jpg&ehk=jFTdU8zCvI4bRezpSHLrrXm%2bIsrq3xVO2iBH4vINl0U%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" title="娱乐天地" class="menu" onclick="changeMenu(this)">
+                <img src="https://ts1.cn.mm.bing.net/th/id/R-C.8bd412b61ca7d91ae421a5cb43284fa8?rik=E4yAhNaYkLk%2few&riu=http%3a%2f%2fpic.bizhi360.com%2fbpic%2f42%2f942.jpg&ehk=gOcIJCZL3ixS8%2bBx9xYvSyGcFeyVCT2Gjc%2bXVpyCnIg%3d&risl=&pid=ImgRaw&r=0" title="树洞" class="menu" onclick="changeMenu(this)">
+            </div>
+            <div class="write">
+                <div class="text active_text" id="me">
+                    <h1>个人简介</h1>
+                    <h3>待时间来丰富</h3>
+                    <p>20岁,是个学生:3</p>
+                </div>
+                <div class="text" id="study">
+                    <h1>学习驿站</h1>
+                    <h3>技术宅拯救世界</h3>
+                    <a href="https://img-blog.csdnimg.cn/2019121410383435.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG5fd2FuZ2Nob25n,size_16,color_FFFFFF,t_70" target="_blank">
+                        <img id="c" src="https://img-blog.csdnimg.cn/2019121410383435.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG5fd2FuZ2Nob25n,size_16,color_FFFFFF,t_70" title="c语言学习路线图">
+                    </a>
+                    <a href="https://img-blog.csdnimg.cn/img_convert/601da8677ace57c07892b24ddae98e42.png" target="_blank">
+                        <img id="java" src="https://img-blog.csdnimg.cn/img_convert/601da8677ace57c07892b24ddae98e42.png" title="java学习路线">
+                    </a>
+                    <a href="https://ts1.cn.mm.bing.net/th/id/R-C.f9ad67c9242072d38127364b7c0ea0c1?rik=vQAKLQ8AC%2bdIzQ&riu=http%3a%2f%2fbbs.itheima.com%2fdata%2fattachment%2fforum%2f201808%2f07%2f192753hzohmdccyzahhhz9.png&ehk=026gu0sNpNimOXntX9b7UtsKksCG1c%2fhNjH9XR16N7c%3d&risl=&pid=ImgRaw&r=0" target="_blank">
+                        <img id="python" src="https://ts1.cn.mm.bing.net/th/id/R-C.f9ad67c9242072d38127364b7c0ea0c1?rik=vQAKLQ8AC%2bdIzQ&riu=http%3a%2f%2fbbs.itheima.com%2fdata%2fattachment%2fforum%2f201808%2f07%2f192753hzohmdccyzahhhz9.png&ehk=026gu0sNpNimOXntX9b7UtsKksCG1c%2fhNjH9XR16N7c%3d&risl=&pid=ImgRaw&r=0" title="python学习路线">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="text">
+                    <h1>娱乐天地</h1>
+                    <h3>来放松亿下吧</h3>
+                    
+                </div>
+                <div class="text">
+                    <h1>树洞</h1>
+                    <h3>留下你的足迹</h3>
+                    <textarea id="issue" rows="50" cols="50" placeholder="写点什么"></textarea>
+                    <button class="commit">提交</button>
+                    <div class="reply">
+                        <p id="msg"></p>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 引入jq文件 -->
+<script src="./js/jquery-3.5.1.min.js"></script>
+<!-- 引入自己的js文件 -->
+<script src="./js/index.js"></script>
+
+</html>
